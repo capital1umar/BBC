@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <style>
+      html {
+        overflow-z: hidden;
+      }
+
+      body {
+      }
+
+      .main-nav-list {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        list-style: none;
+        position: absolute;
+        top: 3rem;
+        left: -1rem;
+        opacity: 0;
+        pointer-events: none;
+        visibility: hidden;
+        transition: all 0.5s ease-in;
+        transform: translate() (100%);
+      }
+
+      .nav-open .main-nav-list {
+        opacity: 1;
+        pointer-events: auto;
+        visibility: visible;
+        transform: translateZ(0);
+      }
+
+      .btn-icon {
+        border: none;
+        background: none;
+        cursor: pointer;
+      }
+
+      .sidebarMenu {
+        height: 3rem;
+        width: 3rem;
+      }
+
+      /* .sidebarMenu[name="close-outline"] {
+        display: none;
+      } */
+
+      .nav-open .sidebarMenu[name="close-outline"] {
+        display: block;
+      }
+
+      .nav-open .main-main {
+        display: none;
+      }
+
+      .main-nav {
+        background-color: rgba(124, 124, 133, 0.164);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+      }
+
+      .list-link {
+        text-decoration: none;
+        color: #1b1b1b;
+        font-size: 1.5rem;
+      }
+
+      .sidebarMenuu {
+        position: absolute;
+        display: none;
+      }
+    </style>
+
+    <script>
+      // const btnEl = document.querySelector(".btn-icon");
+      // const headerEl = document.querySelector(".header");
+
+      // btnEl.addEventListener("click", function () {
+      //   headerEl.classList.toggle("nav-open");
+      // });
+
+      const mobileNav = document.getElementById("mobileNav");
+      const openNav = document.querySelector(".openNav");
+
+      function openNavigation() {
+        const openNav = document.querySelector("#openNav");
+        openNav.style.display = "flex";
+        mobileNav.style.display = "none";
+      }
+
+      function closeNavigation() {
+        openNav.style.display = "none";
+        mobileNav.style.display = "block";
+      }
+    </script>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="main-nav">
+        <ul class="main-nav-list" id="openNav">
+          <li>
+            <a class="list-link" href="">Home</a>
+          </li>
+          <li><a class="list-link" href="">News</a></li>
+          <li><a class="list-link" href="">Sport</a></li>
+          <li><a class="list-link" href="">Business</a></li>
+          <li><a class="list-link" href="">Innovation</a></li>
+          <li><a class="list-link" href="">Culture</a></li>
+          <li><a class="list-link" href="">Travel</a></li>
+          <li><a class="list-link" href="">Earth</a></li>
+          <li><a class="list-link" href="">Video</a></li>
+          <li><a class="list-link" href="">Live</a></li>
+          <li><a class="list-link" href="">Audio</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <button class="btn-icon" id="mobileNav">
+      <ion-icon
+        onclick="openNavigation()"
+        class="sidebarMenu main-main"
+        name="menu-outline"
+        id="mobileNav"
+      ></ion-icon>
+      <ion-icon
+        onclick="closeNavigation()"
+        class="sidebarMenu"
+        name="close-outline"
+        id="mobile-nav"
+      ></ion-icon>
+    </button>
+
+    <div class="search-slide">
+      <form>
+        <input
+          class="search-header"
+          src=""
+          text
+          placeholder="search news, topics and more"
+        />
+        <button>
+          <ion-icon
+            class="search-icon search-slide-icon"
+            name="search-outline"
+          ></ion-icon>
+        </button>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.header {
+  background-color: ghostwhite;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 4rem;
+}
+
+.btn-menu {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-icon {
+  background: none;
+  border: none;
+}
+
+.sidebarMenu {
+  width: 2rem;
+  height: 2.6rem;
+}
+
+.btn-close-icon {
+}
+
+#closeIcon {
+  position: absolute;
+  top: 0.6rem;
+  left: 2rem;
+}
+
+.search--icon {
+  background-color: #141414;
+  background: none;
+  border: none;
+}
+
+.search-icon {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+::placeholder {
+}
+
+.ul-header {
+  list-style: none;
+  display: flex;
+  gap: 1.2rem;
+  flex-direction: column;
+  padding: 0.6rem 1rem;
+  position: fixed;
+  top: 4rem;
+  left: 0;
+
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.search-slide {
+  display: flex;
+}
+
+.search-slide:hover {
+  border: 2px solid #000;
+}
+
+.search-header {
+  padding: 0.8rem;
+}
+
+.search-slide-icon {
+  width: 1.8rem;
+  height: 1.8rem;
+  color: #fff;
+}
+
+.btn-search {
+  width: 40px;
+  background-color: #000;
+  border: none;
+}
+
+.list-link {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #000;
+  text-decoration: none;
+}
+
+nav li {
+  border-bottom: 1px solid #d8caca;
+}
+
+.bbc {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.bbc-letter {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fff;
+  padding: 0.1rem 0.4rem;
+  background-color: #000;
+}
+
+.ul-head {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.ul--header--link {
+  background-color: #000;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 0.3rem 0.5rem;
+  text-decoration: none;
+}
+
+.ul-header-link {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #000;
+  text-decoration: none;
+  margin-right: 1rem;
+}
+
+.ul--header--link:hover {
+  background-color: #141414;
+}
+
+.ul-header-link:hover {
+  background-color: #302e2e;
+  color: #fff;
+  padding: 0.3rem 0.5rem;
+}

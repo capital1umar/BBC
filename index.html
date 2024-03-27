@@ -5,42 +5,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
   </head>
   <body>
-    <header>
-      <nav>
-        <ul>
-          <li>Home</li>
-          <li>News</li>
-          <li>Sport</li>
-          <li>Business</li>
-          <li>Innovation</li>
-          <li>Culture</li>
-          <li>Travel</li>
-          <li>Earth</li>
-          <li>Video</li>
-          <li>Live</li>
-          <li>Audio</li>
-          <input src="" text />
-        </ul>
-        <h1>BBC</h1>
-        <ul>
-          <li><a href="#">Register</a></li>
-          <li><a href="#">Sign In</a></li>
+    <header style="margin-bottom: 40rem" class="header">
+      <nav class="nav-header">
+        <div class="btn-menu">
+          <button class="btn-icon" id="mobileNav">
+            <ion-icon
+              onclick="openNavigation()"
+              class="sidebarMenu"
+              name="menu-outline"
+            ></ion-icon>
+          </button>
+          <button
+            onclick="closeNavigation()"
+            class="btn-icon btn-close-icon"
+            id="mobile-nav"
+          >
+            <ion-icon
+              class="sidebarMenu closeNavigation"
+              name="close-outline"
+              id="closeIcon"
+            ></ion-icon>
+          </button>
+
+          <button class="search--icon">
+            <ion-icon class="search-icon" name="search-outline"></ion-icon>
+          </button>
+        </div>
+
+        <ul class="ul-header" id="openNav">
+          <form class="search-slide">
+            <input
+              class="search-header"
+              src=""
+              text
+              placeholder="search news, topics and more"
+            />
+            <button class="btn-search">
+              <ion-icon
+                class="search-slide-icon"
+                name="search-outline"
+              ></ion-icon>
+            </button>
+          </form>
+
+          <li><a class="list-link" href="">Home</a></li>
+          <li><a class="list-link" href="">News</a></li>
+          <li><a class="list-link" href="">Sport</a></li>
+          <li><a class="list-link" href="">Business</a></li>
+          <li><a class="list-link" href="">Innovation</a></li>
+          <li><a class="list-link" href="">Culture</a></li>
+          <li><a class="list-link" href="">Travel</a></li>
+          <li><a class="list-link" href="">Earth</a></li>
+          <li><a class="list-link" href="">Video</a></li>
+          <li><a class="list-link" href="">Live</a></li>
+          <li><a class="list-link" href="">Audio</a></li>
         </ul>
       </nav>
-      <ul>
-        <li>Home</li>
-        <li>News</li>
-        <li>Sport</li>
-        <li>Business</li>
-        <li>Innovation</li>
-        <li>Culture</li>
-        <li>Travel</li>
-        <li>Earth</li>
-        <li>Video</li>
-        <li>Live</li>
-      </ul>
+      <head>
+        <div class="bbc">
+          <p class="bbc-letter">B</p>
+          <p class="bbc-letter">B</p>
+          <p class="bbc-letter">C</p>
+        </div>
+
+        <ul class="ul-head">
+          <li>
+            <a class="ul--header--link" href="#">Register</a>
+          </li>
+          <li><a class="ul-header-link" href="#">Sign In</a></li>
+        </ul>
+      </head>
+    </header>
+    <header class="second-header">
+      <nav class="second-nav-header">
+        <ul class="second-ul-header">
+          <li class="second-list-header">Home</li>
+          <li class="second-list-header">News</li>
+          <li class="second-list-header">Sport</li>
+          <li class="second-list-header">Business</li>
+          <li class="second-list-header">Innovation</li>
+          <li class="second-list-header">Culture</li>
+          <li class="second-list-header">Travel</li>
+          <li class="second-list-header">Earth</li>
+          <li class="second-list-header">Video</li>
+          <li class="second-list-header">Live</li>
+        </ul>
+      </nav>
     </header>
 
     <main>
@@ -453,5 +513,7 @@
         </div>
       </section>
     </main>
+
+    <script src="script.js"></script>
   </body>
 </html>
