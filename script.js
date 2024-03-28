@@ -10,7 +10,6 @@ const openNav = document.querySelector("#openNav");
 function openNavigation() {
   const openNav = document.querySelector("#openNav");
   const mobileNav = document.querySelector("#mobileNav");
-
   openNav.style.display = "flex";
   openNav.style.opacity = "1";
   openNav.style.pointerEvents = "auto";
